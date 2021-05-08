@@ -35,6 +35,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Forms
 ## Layouts
 # Components
+    - Site header
 	- Navigation
 	- Posts and pages
 	- Comments
@@ -644,6 +645,45 @@ textarea {
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
+
+/* Site header
+--------------------------------------------- */
+
+.site-header-content {
+	max-width: 60em;
+	margin: 0 auto;
+	padding: 0 2em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.site-branding {
+	flex-basis: 10em;
+	background: red;
+}
+
+.site-title {
+	margin: 0;
+	text-align: center;
+}
+
+.site-title a {
+	text-decoration: none;
+}
+
+.site-navigation {
+	background: yellow;
+}
+
+.site-subtitle {
+	flex-basis: 10em;
+	background: blue;
+}
+
+.custom-logo {
+	width: 10em;
+}
 
 /* Navigation
 --------------------------------------------- */
