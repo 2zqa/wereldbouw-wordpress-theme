@@ -649,6 +649,14 @@ textarea {
 /* Site header
 --------------------------------------------- */
 
+.site-header, .site, html, body {
+	height: 100%;
+}
+
+.site-header {
+	background-size: cover;
+}
+
 .site-header-content {
 	max-width: 60em;
 	margin: 0 auto;
