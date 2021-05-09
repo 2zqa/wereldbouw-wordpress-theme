@@ -765,6 +765,10 @@ textarea {
 	color: black;
 }
 
+.main-navigation a:hover {
+	color: #5555ff;
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
