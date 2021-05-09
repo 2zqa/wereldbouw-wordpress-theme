@@ -811,6 +811,23 @@ textarea {
 	flex: 1 0 50%;
 }
 
+/* Post naviation */
+
+.post-navigation {
+	background: #5555ff;
+	padding: 4rem 0;
+}
+
+.post-navigation .nav-links {
+	max-width: 60rem;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.post-navigation a {
+	color: white;
+}
+
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
