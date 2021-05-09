@@ -45,6 +45,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Galleries
 # plugins
 	- Jetpack infinite scroll
+	- bbPress
 # Utilities
 	- Accessibility
 	- Alignments
@@ -534,7 +535,7 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #5555ff;;
 }
 
 a:visited {
@@ -544,7 +545,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: #191970;
+	color: #5555ff;;
 }
 
 a:focus {
@@ -1032,6 +1033,59 @@ textarea {
 /* Re-display the Theme Footer when Infinite Scroll has reached its end. */
 .infinity-end.neverending .site-footer {
 	display: block;
+}
+
+/* bbPress
+--------------------------------------------- */
+#bbpress-forums {
+	max-width: 60rem;
+	margin: 0 auto;
+	padding: 1rem;
+}
+#bbpress-forums ul.bbp-forums, #bbpress-forums ul.bbp-topics, #bbpress-forums ul.bbp-replies,
+#bbpress-forums li.bbp-body ul.topic, #bbpress-forums li.bbp-body ul.forum {
+	border: 0px;
+}
+#bbpress-forums a {
+	text-decoration: none;
+}
+#bbpress-forums li.bbp-header {
+	padding: 0.5rem 0;
+	color: black;
+}
+#bbpress-forums li.bbp-footer {
+	display: none;
+}
+#bbpress-forums ul.odd {
+	background: inherit;
+}
+#bbpress-forums li.bbp-body ul.forum,
+#bbpress-forums li.bbp-body ul.topic {
+	padding: 1.5rem 0;
+}
+.bbp-forum-title,
+.bbp-topic-title .bbp-topic-permalink {
+	font-weight: bold;
+	font-size: 1.17rem;
+	color: black;
+	text-decoration: none;
+}
+.bbp-forum-title:visited,
+.bbp-topic-freshness > a {
+	color: black;
+}
+.bbp-forum-title:hover,
+.bbp-topic-title .bbp-topic-permalink:hover,
+.bbp-topic-freshness > a:hover {
+	color: #5555ff;
+}
+.bbp-forum-content {
+	color: black;
+}
+
+#bbpress-forums p.bbp-topic-meta,
+#bbpress-forums ul.bbp-topics {
+	font-size: 1rem;
 }
 
 /*--------------------------------------------------------------
