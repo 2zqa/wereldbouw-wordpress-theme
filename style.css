@@ -660,7 +660,6 @@ textarea {
 
 .site-branding {
 	flex-basis: 10em;
-	background: red;
 }
 
 .site-title {
@@ -670,10 +669,6 @@ textarea {
 
 .site-title a {
 	text-decoration: none;
-}
-
-.site-navigation {
-	background: yellow;
 }
 
 .site-subtitle {
@@ -690,6 +685,7 @@ textarea {
 .main-navigation {
 	display: block;
 	width: 100%;
+	padding: 1em;
 }
 
 .main-navigation ul {
@@ -751,6 +747,7 @@ textarea {
 
 	.main-navigation ul {
 		display: flex;
+		justify-content: space-between;
 	}
 }
 
