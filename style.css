@@ -485,7 +485,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 0.5em 0.5em;
 }
 
 ul {
@@ -892,6 +892,41 @@ textarea {
 
 .widget select {
 	max-width: 100%;
+}
+
+.widget-area {
+	background: #2d3436;
+	padding: 1rem 0;
+}
+
+.widget-area-inner {
+	max-width: 60rem;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+.widget-area .widget {
+	background: white;
+	flex-basis: 18rem;
+	margin: 1rem;
+	padding: 1rem;
+}
+
+.widget-area ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.widget-area li {
+	padding: 0.2rem 0;
+}
+
+.widget-title {
+	margin: 0 0 0.2rem 0;
+	font-size: 1.17rem;
 }
 
 /* Media
