@@ -649,18 +649,20 @@ textarea {
 /* Site header
 --------------------------------------------- */
 
-.site-header, .site, html, body {
+.site-header-image, .site, html, body {
+	/* All necessary for making the image take the full height */
 	height: 100%;
 }
 
-.site-header {
+.site-header-image {
 	background-size: cover;
+	color: white;
 }
 
 .site-header-content {
 	max-width: 60em;
 	margin: 0 auto;
-	padding: 0 2em;
+	padding: 2em;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -670,24 +672,26 @@ textarea {
 	flex-basis: 10em;
 }
 
+.site-header-inner {
+	padding: 0.5em 0;
+	flex-grow: 1; /* Makes element take up remaining space */
+}
+
 .site-title {
-	margin: 0;
-	text-align: center;
+	margin: 0 0.5em 0 0;
+	font-size: 3em;
+	display: inline;
 }
 
 .site-title a {
 	text-decoration: none;
+	color: black;
+	font-weight: bold;
 }
 
-.site-subtitle {
-	flex-basis: 10em;
-}
-
-.site-subtitle p {
-	background: white;
-	padding: 0.3em 0.6em;
-	border-radius: 0.5em;
-	text-align: center;
+.site-description {
+	display: inline;
+	font-style: italic;
 }
 
 .custom-logo {
@@ -699,7 +703,6 @@ textarea {
 .main-navigation {
 	display: block;
 	width: 100%;
-	padding: 1em;
 }
 
 .main-navigation ul {
@@ -751,10 +754,15 @@ textarea {
 	color: black;
 }
 
+.site-header-image a {
+	color: white; /* Make text white when displayed on image */
+}
+
 .main-navigation li li a {
 	/* submenus */
 	font-weight: normal;
 	text-transform: none;
+	color: black;
 }
 
 /* Small menu. */
@@ -809,9 +817,10 @@ textarea {
 	display: block;
 }
 
-.post,
-.page {
-	margin: 0 0 1.5em;
+.post, article.page {
+	max-width: 60em;
+	margin: 0 auto;
+	padding: 0 2em;
 }
 
 .updated:not(.published) {
