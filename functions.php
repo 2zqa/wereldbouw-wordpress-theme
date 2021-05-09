@@ -40,6 +40,9 @@ if ( ! function_exists( 'wereldbouw_setup' ) ) :
 		 */
 		add_theme_support( 'title-tag' );
 
+		// Wide panels in theme
+		add_theme_support( 'align-wide' );
+
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
