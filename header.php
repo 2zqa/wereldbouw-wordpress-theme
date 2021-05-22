@@ -29,7 +29,7 @@
 	<header id="masthead" class="site-header site-header-image" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0) 25%), url(<?= htmlspecialchars(header_image()) ?>);">
 	<?php else: ?>
 	<header id="masthead" class="site-header">
-	<?php endif; ?>
+	<?php endif ?>
 		<div class="site-header-content">
 			<div class="site-branding">
 				<?php the_custom_logo()	?>
@@ -48,7 +48,7 @@
 					if ( $wereldbouw_description || is_customize_preview() ) :
 						?>
 						<p class="site-description"><?php echo $wereldbouw_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-					<?php endif; ?>
+					<?php endif ?>
 				</div> <!-- .site-subtitle -->
 				<nav id="site-navigation" class="main-navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wereldbouw' ); ?></button>
@@ -65,4 +65,7 @@
 
 			
 		</div><!-- .site-header-content -->
+		<?php if (is_front_page()): ?>
+		<a class="site-header-scrolldown" href="#primary"><img src="<?= get_theme_file_uri('assets/images/scroll.svg'); ?>" /></a>
+		<?php endif ?>
 	</header><!-- #masthead -->

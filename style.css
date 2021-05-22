@@ -738,6 +738,15 @@ textarea {
 	width: auto;
 	padding-right: 2rem;
 }
+
+.site-header-scrolldown {
+	position: absolute;
+	bottom: 2rem;
+	left:0;right:0;
+	margin: 0 auto;
+
+	width: 2.5rem;
+	height: auto;
 }
 
 /* Navigation
