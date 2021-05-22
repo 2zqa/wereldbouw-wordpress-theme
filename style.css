@@ -576,7 +576,8 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #5555ff;;
+	color: #5555ff;
+	text-decoration: none;
 }
 
 a:visited {
@@ -586,7 +587,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: #5555ff;;
+	color: #e17055;
 }
 
 a:focus {
@@ -916,6 +917,16 @@ textarea {
 
 .entry-content li {
 	padding: 0 0 0 0.5rem;
+}
+
+.entry-content a {
+	border-bottom: 0.2rem solid #5555ff;
+	color: inherit;
+}
+
+.entry-content a:hover, .entry-content a:active {
+	border-bottom: 0.2rem solid #e17055;
+	color: #e17055;
 }
 
 .page-links {
