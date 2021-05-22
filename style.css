@@ -663,14 +663,10 @@ textarea {
 .site-header-content {
 	max-width: 60rem;
 	margin: 0 auto;
-	padding: 2rem;
+	padding: 2rem 1rem;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-}
-
-.site-branding {
-	flex-basis: 10em;
 }
 
 .site-header-inner {
@@ -696,7 +692,10 @@ textarea {
 }
 
 .custom-logo {
-	width: 10em;
+	height: 10em;
+	width: auto;
+	padding-right: 2rem;
+}
 }
 
 /* Navigation
