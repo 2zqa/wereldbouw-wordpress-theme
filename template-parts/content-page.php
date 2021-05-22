@@ -10,11 +10,16 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
 
-	<?php wereldbouw_post_thumbnail(); ?>
+<div class="entry-hero <?= has_post_thumbnail()? "entry-hero-thumbnail": "" ?>">
+		<?php wereldbouw_post_thumbnail(); ?>
+
+		<div class="entry-hero-text">
+			<header class="entry-header">
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			</header><!-- .entry-header -->
+		</div>
+	</div>
 
 	<div class="entry-content">
 		<?php

@@ -921,7 +921,7 @@ textarea {
 }
 
 .entry-content ul, .entry-content ol {
-	padding: 0 0 0 2.5rem;
+	padding: 0 1rem 0 2.5rem;
 }
 
 .entry-content li {
@@ -941,6 +941,26 @@ textarea {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.entry-hero-thumbnail {
+	position: relative;
+}
+
+.entry-hero-thumbnail .entry-hero-text {
+	/* Bottom and full width */
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: white;
+}
+
+.post-thumbnail img {
+	width: 100%;
+	height: 15rem;
+	object-fit: cover;
+	filter: brightness(40%);
 }
 
 /* Comments
