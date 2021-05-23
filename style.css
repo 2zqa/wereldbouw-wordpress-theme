@@ -917,6 +917,17 @@ textarea {
 	display: none;
 }
 
+.page-header {
+	background: #2d3436 url(assets/images/stone_background.png);
+	margin-bottom: 2rem;
+}
+.page-header .page-title {
+	color: white;
+	max-width: 60rem;
+	margin: 0 auto;
+	padding: 4rem 1rem;
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
@@ -1032,8 +1043,9 @@ textarea {
 }
 
 .widget-area {
-	background: #2d3436;
+	background: #2d3436 url(assets/images/stone_background.png);
 	padding: 1rem 0;
+	margin-top: 2rem;
 }
 
 .widget-area-inner {
