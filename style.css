@@ -771,6 +771,7 @@ textarea {
 	position: absolute;
 	top: 100%;
 	left: -999em;
+	z-index: 1;
 }
 
 .main-navigation ul ul ul {
