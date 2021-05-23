@@ -458,6 +458,11 @@ h4,
 h5,
 h6 {
 	clear: both;
+	margin-top: 0;
+}
+
+h2 {
+	font-size: 1.17rem;
 }
 
 p {
@@ -1016,7 +1021,6 @@ textarea {
 
 .widget-title {
 	margin: 0 0 0.2rem 0;
-	font-size: 1.17rem;
 }
 
 /* Media
