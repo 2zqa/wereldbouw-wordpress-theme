@@ -40,7 +40,7 @@
 			if (is_singular()):
 				the_content();
 			else: ?>
-				<a href="test">
+				<a href="<?= get_permalink() ?>">
 					<?php the_excerpt() ?>
 				</a>
 			<?php endif
