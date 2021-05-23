@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="80" height="150" version="1.1" viewBox="0 0 21.167 39.688" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(-.57877 -.69098)">
-  <g transform="matrix(.99994 0 0 1 .0006833 -.00042194)" fill="#fff" shape-rendering="auto">
-   <path d="m11.162 0.69141c-5.8517 0-10.584 4.7303-10.584 10.582v18.521c0 5.8517 4.7323 10.584 10.584 10.584s10.584-4.7323 10.584-10.584v-18.521c0-5.8517-4.7323-10.582-10.584-10.582zm0 1.3223c5.1417 0 9.2598 4.1181 9.2598 9.2598v18.521c0 5.1417-4.1181 9.2598-9.2598 9.2598s-9.2598-4.1181-9.2598-9.2598v-18.521c0-5.1417 4.1181-9.2598 9.2598-9.2598z" color="#000000" color-rendering="auto" dominant-baseline="auto" fill="#fff" image-rendering="auto" solid-color="#000000" stop-color="#000000" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
-  </g>
-  <path d="m11.162 9.9514v2.6458" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6458" style="paint-order:normal"/>
+<svg width="552" height="304.28" version="1.1" viewBox="0 0 146.05 80.509" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(5.2917 5.2917)">
+  <path d="m0 0 67.733 67.733 67.733-67.733" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="10.583"/>
  </g>
 </svg>
