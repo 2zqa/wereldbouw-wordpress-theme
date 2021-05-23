@@ -907,6 +907,7 @@ textarea {
 .single .entry-content h3,
 .single .entry-content > figure,
 .single .entry-content > a,
+.single .entry-content > form,
 .page-title,
 #comments {
 	display: block;
