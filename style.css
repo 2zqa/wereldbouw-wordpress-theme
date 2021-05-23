@@ -902,8 +902,6 @@ textarea {
 .single .entry-header,
 .single .entry-footer,
 .single .entry-content > p,
-.single .entry-content ul,
-.single .entry-content ol,
 .single .entry-content h1,
 .single .entry-content h2,
 .single .entry-content h3,
@@ -926,12 +924,15 @@ textarea {
 	margin: 1.5em 0 0;
 }
 
-.entry-content ul, .entry-content ol {
-	padding: 0 1rem 0 2.5rem;
+.single .entry-content ul, .single .entry-content ol {
+	display: block;
+	max-width: 60rem;
+	margin: 1rem auto;
+	padding: 0 0 0 3rem;
 }
 
 .entry-content li {
-	padding: 0 0 0 0.5rem;
+	padding: 0 0 0 1rem;
 }
 
 .entry-content a {
