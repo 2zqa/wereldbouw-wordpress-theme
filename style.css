@@ -958,17 +958,21 @@ textarea {
 	margin-bottom: 2rem;
 }
 
-.single .entry-hero-no-thumbnail, .page-hero {
+.single .entry-hero, .page-hero {
 	background: #2d3436 url(assets/images/stone_background.png);
 }
 
-.single .entry-hero .entry-hero-text, .page-hero-text {
+.single .entry-hero .entry-header-wrapper, .page-hero-text {
 	/* Bottom and full width */
 	position: absolute;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	color: white;
+}
+
+.single .post-thumbnail {
+	height: 15rem;
 }
 
 .single .post-thumbnail img {

@@ -10,10 +10,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-hero <?= has_post_thumbnail()? "": "entry-hero-no-thumbnail" ?>">
+	<div class="<?= get_post_type() == "post"? "entry-hero": "" ?>">
 		<?php wereldbouw_post_thumbnail(); ?>
 
-		<div class="entry-hero-text">
+		<div class="entry-header-wrapper">
 			<header class="entry-header">
 				<?php
 				if ( is_singular() ) :
