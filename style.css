@@ -873,20 +873,34 @@ textarea {
 
 /* Post naviation */
 
-.post-navigation {
+.post-navigation, .posts-navigation {
 	background: #5555ff url(assets/images/water_background.png);
 	padding: 4rem 0;
 	margin: 2rem 0;
 }
 
-.post-navigation .nav-links {
+.post-navigation .nav-links, .posts-navigation .nav-links {
 	max-width: 60rem;
 	margin: 0 auto;
 	padding: 0 1rem;
 }
 
-.post-navigation a {
+.post-navigation a, .posts-navigation a {
 	color: white;
+}
+
+.post-navigation .nav-previous::before, .posts-navigation .nav-previous::before {
+	content: "◀ ";
+	color: white;
+}
+
+.post-navigation .nav-next::after, .posts-navigation .nav-next::after {
+	content: " ▶";
+	color: white;
+}
+
+.post-navigation a:hover, .posts-navigation a:hover {
+	color: #e17055;
 }
 
 /* Posts and pages
