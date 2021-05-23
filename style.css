@@ -899,16 +899,16 @@ textarea {
 	margin: 0 auto;
 }
 
-.entry-header,
-.entry-footer,
-.entry-content > p,
-.entry-content ul,
-.entry-content ol,
-.entry-content h1,
-.entry-content h2,
-.entry-content h3,
-.entry-content > figure,
-.entry-content > a,
+.single .entry-header,
+.single .entry-footer,
+.single .entry-content > p,
+.single .entry-content ul,
+.single .entry-content ol,
+.single .entry-content h1,
+.single .entry-content h2,
+.single .entry-content h3,
+.single .entry-content > figure,
+.single .entry-content > a,
 #comments {
 	display: block;
 	max-width: 60rem;
@@ -949,11 +949,12 @@ textarea {
 	margin: 0 0 1.5em;
 }
 
-.entry-hero-thumbnail {
+/* Single posts and pages */
+.single .entry-hero-thumbnail {
 	position: relative;
 }
 
-.entry-hero-thumbnail .entry-hero-text {
+.single .entry-hero-thumbnail .entry-hero-text {
 	/* Bottom and full width */
 	position: absolute;
 	left: 0;
@@ -962,11 +963,43 @@ textarea {
 	color: white;
 }
 
-.post-thumbnail img {
+.single .post-thumbnail img {
 	width: 100%;
 	height: 15rem;
 	object-fit: cover;
 	filter: brightness(40%);
+}
+
+/* Post and page lists */
+.post-list {
+	max-width: 60rem;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.post-list article {
+	flex: 1 0 60rem;
+	margin: 0;
+	padding: 1rem;
+	max-width: 100%;
+}
+
+@media (min-width: 30rem) {
+    .post-list article {
+       max-width: 50%;
+    }
+}
+ 
+@media (min-width: 50rem) {
+    .post-list article {
+        max-width: 33.3%;
+    }
+}
+
+.post-list .post-thumbnail {
+	display: block;
+	padding: 0.3rem 0 0.5rem 0;
 }
 
 /* Comments
