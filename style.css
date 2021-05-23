@@ -1004,7 +1004,11 @@ textarea {
 
 .entry-meta, .entry-footer {
 	font-size: 0.85rem;
-	color: #2d3436;
+	color: #636e72;
+}
+
+.entry-footer {
+	margin-top: 1rem;
 }
 
 /* Comments

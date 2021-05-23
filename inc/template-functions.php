@@ -26,6 +26,13 @@ function wereldbouw_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'wereldbouw_body_classes' );
 
+// Removes the excerpt "Read More" text
+function no_excerpt_more($more) {
+	global $post;
+	return '...';
+}
+add_filter( 'excerpt_more', 'no_excerpt_more' );
+
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
