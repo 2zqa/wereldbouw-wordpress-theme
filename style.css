@@ -874,8 +874,9 @@ textarea {
 /* Post naviation */
 
 .post-navigation {
-	background: #5555ff;
+	background: #5555ff url(assets/images/water_background.png);
 	padding: 4rem 0;
+	margin: 2rem 0;
 }
 
 .post-navigation .nav-links {
