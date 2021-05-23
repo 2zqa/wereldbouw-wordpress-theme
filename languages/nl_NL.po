@@ -9,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2020-04-17T21:03:15+00:00\n"
-"PO-Revision-Date: 2021-05-09 14:37+0200\n"
+"PO-Revision-Date: 2021-05-23 16:38+0200\n"
 "X-Generator: Poedit 2.4.3\n"
 "X-Domain: _s\n"
 "Last-Translator: \n"
@@ -49,6 +49,8 @@ msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
+"Het lijkt er op dat niets gevonden is op deze plek. Probeer eens een van de "
+"onderstaande links of een zoekopdracht?"
 
 #: 404.php:31
 msgid "Most Used Categories"
@@ -57,24 +59,24 @@ msgstr "Meest gebruikte categorieën"
 #. translators: %1$s: smiley
 #: 404.php:49
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
+msgstr "Probeer eens in de maandelijkse archieven te kijken. %1$s"
 
 #. translators: 1: title.
 #: comments.php:35
 msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr ""
+msgstr "Een reactie op &ldquo;%1$s&rdquo;"
 
 #. translators: 1: comment count number, 2: title.
 #: comments.php:41
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1$s reactie op &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s reacties op &ldquo;%2$s&rdquo;"
 
 #: comments.php:68
 msgid "Comments are closed."
-msgstr ""
+msgstr "Reacties zijn uitgeschakeld."
 
 #: footer.php:18
 msgid "https://wordpress.org/"
@@ -100,11 +102,11 @@ msgstr "Zijbalk"
 
 #: functions.php:132
 msgid "Add widgets here."
-msgstr ""
+msgstr "Voeg hier widgets toe."
 
 #: header.php:26
 msgid "Skip to content"
-msgstr ""
+msgstr "Ga naar inhoud"
 
 #: header.php:49
 msgid "Primary Menu"
