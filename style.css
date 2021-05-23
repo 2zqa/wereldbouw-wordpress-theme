@@ -906,6 +906,7 @@ textarea {
 .single .entry-content h3,
 .single .entry-content > figure,
 .single .entry-content > a,
+.page-title,
 #comments {
 	display: block;
 	max-width: 60rem;
@@ -915,17 +916,6 @@ textarea {
 
 .updated:not(.published) {
 	display: none;
-}
-
-.page-header {
-	background: #2d3436 url(assets/images/stone_background.png);
-	margin-bottom: 2rem;
-}
-.page-header .page-title {
-	color: white;
-	max-width: 60rem;
-	margin: 0 auto;
-	padding: 4rem 1rem;
 }
 
 .page-content,
@@ -960,12 +950,18 @@ textarea {
 	margin: 0 0 1.5em;
 }
 
-/* Single posts and pages */
-.single .entry-hero-thumbnail {
+/* Headers of single posts and pages, also header of post and page lists */
+.single .entry-hero, .page-header {
 	position: relative;
+	min-height: 15rem;
+	margin-bottom: 2rem;
 }
 
-.single .entry-hero-thumbnail .entry-hero-text {
+.single .entry-hero-no-thumbnail, .page-hero {
+	background: #2d3436 url(assets/images/stone_background.png);
+}
+
+.single .entry-hero .entry-hero-text, .page-hero-text {
 	/* Bottom and full width */
 	position: absolute;
 	left: 0;
@@ -1015,6 +1011,9 @@ textarea {
 
 .entry-meta, .entry-footer {
 	font-size: 0.85rem;
+}
+
+.post-list .entry-meta, .entry-footer {
 	color: #636e72;
 }
 

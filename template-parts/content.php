@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-hero <?= has_post_thumbnail()? "entry-hero-thumbnail": "" ?>">
+	<div class="entry-hero <?= has_post_thumbnail()? "": "entry-hero-no-thumbnail" ?>">
 		<?php wereldbouw_post_thumbnail(); ?>
 
 		<div class="entry-hero-text">
