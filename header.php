@@ -26,7 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'wereldbouw' ); ?></a>
 
 	<?php if (is_front_page()): ?>
-	<header id="masthead" class="site-header site-header-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.5)), url(<?= htmlspecialchars(header_image()) ?>);">
+	<header id="masthead" class="site-header site-header-image" style="background-image: linear-gradient(rgba(255, 255, 255, 0.5) 0%, transparent 25%), url(<?= htmlspecialchars(header_image()) ?>);">
 	<?php else: ?>
 	<header id="masthead" class="site-header">
 	<?php endif ?>

@@ -704,7 +704,8 @@ textarea {
 
 .site-header-image {
 	background-size: cover;
-	color: white;
+	/* color: white; */
+	color: black;
 }
 
 .site-header-content {
@@ -812,7 +813,7 @@ textarea {
 }
 
 .site-header-image a {
-	color: white; /* Make text white when displayed on image */
+	/*color: white; /* Make text white when displayed on image */
 }
 
 .main-navigation li li a {
