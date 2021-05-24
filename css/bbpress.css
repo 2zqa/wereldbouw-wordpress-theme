@@ -65,18 +65,12 @@ body.reply-edit .reply {
 	float: none;
 }
 
-#bbpress-forums .bbp-meta, #bbpress-forums .bbp-reply-author, #bbpress-forums .bbp-header {
+#bbpress-forums .bbp-meta,
+#bbpress-forums .bbp-author-role,
+#bbpress-forums .bbp-author-ip {
     color: #636e72;
     font-size: 0.85rem;
-}
-
-#bbpress-forums .bbp-meta a, #bbpress-forums .bbp-reply-author a {
-    border: none;
-    color: inherit;
-}
-
-#bbpress-forums .bbp-meta a:hover, #bbpress-forums .bbp-reply-author a:hover {
-    color: #e17055;
+	font-weight: normal;
 }
 
 #bbpress-forums div.reply {
@@ -160,7 +154,12 @@ li.bbp-topic-title {
 #bbpress-forums a.bbp-forum-title {
     font-weight: bold;
     border-bottom: none;
-    font-size: 1.17rem;
+}
+
+#bbpress-forums .bbp-topic-title a.bbp-topic-permalink,
+#bbpress-forums .bbp-forum-info a.bbp-forum-title {
+	/* Only larger in the actual forum/topic list, not in other places */
+	font-size: 1.17rem;
 }
 
 li.bbp-forum-topic-count,
@@ -217,18 +216,13 @@ li.bbp-topic-freshness {
 	float: none;
 }
 
-#bbpress-forums div.bbp-forum-author .bbp-author-name,
-#bbpress-forums div.bbp-topic-author .bbp-author-name,
-#bbpress-forums div.bbp-reply-author .bbp-author-name {
-	word-wrap: break-word;
-	display: inline-block;
-    color: #5555ff;
+#bbpress-forums .bbp-author-link {
+	color: #5555ff;
+	border-bottom: none;
 }
 
-#bbpress-forums div.bbp-forum-author .bbp-author-name:hover,
-#bbpress-forums div.bbp-topic-author .bbp-author-name:hover,
-#bbpress-forums div.bbp-reply-author .bbp-author-name:hover {
-    color: #e17055;
+#bbpress-forums .bbp-author-link:hover {
+	color: #e17055;
 }
 
 #bbpress-forums div.bbp-topic-author .bbp-author-name,
@@ -483,9 +477,7 @@ span.bbp-admin-links {
 }
 
 span.bbp-admin-links a {
-
-	font-weight: 400;
-	text-transform: uppercase;
+	border-bottom: none;
 	text-decoration: none;
 }
 
@@ -507,7 +499,7 @@ td.bbp-topic-counts {
 .bbp-reply-header a.bbp-reply-permalink {
 	float: right;
 	margin-left: 10px;
-
+	border-bottom: 0.2rem solid transparent;
 }
 
 /* =Toggles
@@ -1227,10 +1219,8 @@ fieldset div.avatar {
 }
 
 #bbpress-forums #bbp-user-wrapper h2.entry-title {
-
 	margin: 0;
-	padding-bottom: 10px;
-	padding-top: 0;
+	padding: 0 0 1rem 0;
 	clear: none;
 }
 
@@ -1281,11 +1271,18 @@ fieldset div.avatar {
 	display: block;
 	border: 1px solid transparent;
 	text-decoration: none;
+	color: #5555ff;
+}
+
+#bbpress-forums #bbp-single-user-details #bbp-user-navigation a:hover {
+	color: #e17055;
 }
 
 #bbpress-forums #bbp-single-user-details #bbp-user-navigation li.current a {
 	background: #eee;
 	opacity: 0.8;
+	font-weight: bold;
+	color: black;
 }
 
 #bbpress-forums #bbp-user-body {
