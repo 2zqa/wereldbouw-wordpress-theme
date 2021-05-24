@@ -925,6 +925,7 @@ textarea {
 .single .entry-content > a,
 .single .entry-content > form,
 .page-title,
+.archive-description,
 #comments {
 	display: block;
 	max-width: 60rem;
