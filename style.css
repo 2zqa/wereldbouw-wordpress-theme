@@ -1079,12 +1079,15 @@ textarea {
 .comment-list .comment-author {
 	font-size: 1.17rem;
 	font-weight: bold;
-	display: flex;
-	align-items: center;
+	margin-bottom: 0.5rem;
 }
 
-.comment-list b.fn {
-	padding: 0 0.2rem 0 0.5rem;
+.comment-author {
+	display: inline;
+}
+
+.comment-author img {
+	vertical-align: middle;
 }
 
 
