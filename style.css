@@ -43,6 +43,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Media
 	- Captions
 	- Galleries
+	- Blocks
 # plugins
 	- Jetpack infinite scroll
 	- bbPress
@@ -1183,6 +1184,15 @@ textarea {
 	display: block;
 }
 
+/* Blocks
+--------------------------------------------- */
+
+.single .entry-content > .wp-block-columns {
+	max-width: 60rem;
+	margin: 1rem auto;
+	padding: 0 1rem;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
@@ -1278,6 +1288,15 @@ textarea {
 }
 
 
-.alignfull {
+
+.single .entry-content > .alignfull {
 	width: 100%;
+	max-width: none;
+}
+
+
+.single .entry-content > .alignwide {
+	max-width: 80rem;
+	margin-left: auto;
+	margin-right: auto;
 }
