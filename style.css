@@ -1052,6 +1052,42 @@ textarea {
 	display: block;
 }
 
+.comment-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.comment-list ol.children {
+	list-style: none;
+	margin: 0;
+	padding: 0 0 0 2.5rem;
+}
+
+.comment-list li {
+	margin: 1rem 0;
+	padding: 0;
+}
+
+.comment-list .comment-meta {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.comment-list .comment-author {
+	font-size: 1.17rem;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+}
+
+.comment-list b.fn {
+	padding: 0 0.2rem 0 0.5rem;
+}
+
+
 /* Widgets
 --------------------------------------------- */
 .widget {
