@@ -852,6 +852,24 @@ textarea {
 	display: block;
 }
 
+.main-navigation.toggled {
+	position: relative;
+}
+
+.main-navigation.toggled ul.menu {
+	position: absolute;
+	background: white;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	left: -1rem;
+	width: 20rem;
+	max-width: 100vw;
+	padding: 0.5rem;
+	z-index: 1;
+}
+
+.main-navigation.toggled li {
+	padding: 0.5rem;
+}
 @media screen and (min-width: 37.5em) {
 
 	.menu-toggle {
