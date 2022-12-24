@@ -41,19 +41,14 @@ if ( ! function_exists( 'wereldbouw_header_style' ) ) :
 	 * @see wereldbouw_custom_header_setup().
 	 */
 	function wereldbouw_header_style() {
-		$header_text_color = get_header_textcolor();
+		$header_background_color = get_theme_mod( 'wereldbouw_header_background_color', "#ffffff");
+		$header_text_color = get_theme_mod( 'header_textcolor', "000000");
 
-		/*
-		 * If no custom options for text are set, let's bail.
-		 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: add_theme_support( 'custom-header' ).
-		 */
-		if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
-			return;
-		}
-
-		// If we get this far, we have custom styles. Let's do this.
 		?>
 		<style type="text/css">
+			.site-header {
+				background-color: <?php echo esc_attr( $header_background_color ); ?>;
+			}
 		<?php
 		// Has the text been hidden?
 		if ( ! display_header_text() ) :
@@ -68,7 +63,8 @@ if ( ! function_exists( 'wereldbouw_header_style' ) ) :
 		else :
 			?>
 			.site-title a,
-			.site-description {
+			.site-description,
+			.main-navigation a {
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}
 		<?php endif; ?>

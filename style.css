@@ -69,7 +69,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-html {
+ html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 }
@@ -704,7 +704,7 @@ textarea {
 
 .site-header-image {
 	background-size: cover;
-	/* color: white; */
+	background-position-x: center;
 	color: black;
 }
 
@@ -831,10 +831,6 @@ textarea {
 	color: black;
 }
 
-.site-header-image a {
-	/*color: white; /* Make text white when displayed on image */
-}
-
 .main-navigation li li a {
 	/* submenus */
 	font-weight: normal;
@@ -944,6 +940,7 @@ textarea {
 
 /* Posts and pages
 --------------------------------------------- */
+
 .sticky {
 	display: block;
 }
@@ -1265,7 +1262,7 @@ textarea {
 /* Blocks
 --------------------------------------------- */
 
-.single .entry-content > .wp-block-columns {
+.single .entry-content .wp-block-columns {
 	max-width: 60rem;
 	margin: 1rem auto;
 	padding: 0 1rem;
