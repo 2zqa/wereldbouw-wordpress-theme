@@ -958,6 +958,7 @@ textarea {
 .single .entry-content > figure,
 .single .entry-content > a,
 .single .entry-content > form,
+.single .entry-content > blockquote,
 .page-title,
 .archive-description,
 #comments {
@@ -1268,6 +1269,11 @@ textarea {
 	padding: 0 1rem;
 }
 
+.single .entry-content blockquote {
+	border-left: 0.2rem solid black;
+	font-style: italic;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
@@ -1284,6 +1290,15 @@ textarea {
 /* Re-display the Theme Footer when Infinite Scroll has reached its end. */
 .infinity-end.neverending .site-footer {
 	display: block;
+}
+
+/* Enlighter Code Highlighting 
+--------------------------------------------- */
+
+.entry-content .enlighter-default {
+	margin: 1rem auto;
+	max-width: 63rem;
+	padding: 1rem;
 }
 
 /*--------------------------------------------------------------
