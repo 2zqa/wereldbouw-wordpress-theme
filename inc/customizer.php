@@ -17,10 +17,18 @@ function wereldbouw_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'wereldbouw_header_background_color', array(
         'default' => '#ffffff',
     ));
+	$wp_customize->add_setting( 'wereldbouw_header_description_color', array(
+        'default' => '#ffffff',
+    ));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wereldbouw_header_background_color', array(
         'label' => __('Header Background Color', 'wereldbouw'),
         'section' => 'colors',
         'settings' => 'wereldbouw_header_background_color'
+    )));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wereldbouw_header_description_color', array(
+        'label' => __('Description Text Color', 'wereldbouw'),
+        'section' => 'colors',
+        'settings' => 'wereldbouw_header_description_color'
     )));
 
 	if ( isset( $wp_customize->selective_refresh ) ) {

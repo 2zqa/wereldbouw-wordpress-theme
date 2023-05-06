@@ -43,6 +43,7 @@ if ( ! function_exists( 'wereldbouw_header_style' ) ) :
 	function wereldbouw_header_style() {
 		$header_background_color = get_theme_mod( 'wereldbouw_header_background_color', "#ffffff");
 		$header_text_color = get_theme_mod( 'header_textcolor', "000000");
+		$description_text_color = get_theme_mod( 'wereldbouw_header_description_color', "#ffffff");
 
 		?>
 		<style type="text/css">
@@ -62,8 +63,10 @@ if ( ! function_exists( 'wereldbouw_header_style' ) ) :
 			// If the user has set a custom color for the text use that.
 		else :
 			?>
+			.site-description, .site-header-widget-area {
+				color: <?php echo esc_attr( $description_text_color ); ?>;
+			}
 			.site-title a,
-			.site-description,
 			.main-navigation a {
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}

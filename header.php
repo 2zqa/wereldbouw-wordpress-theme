@@ -32,24 +32,17 @@
 	<?php endif ?>
 		<div class="site-header-content">
 			<div class="site-branding">
-				<?php the_custom_logo()	?>
+				<div class="site-branding-logo">
+					<?php the_custom_logo()	?>
+				</div>
+				<?php if (is_front_page()):	?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php else:	?>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php endif ?>
 			</div><!-- .site-branding -->
 
 			<div class="site-header-inner">
-				<div class="site-titles">
-					<?php if (is_front_page()):	?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php else:	?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php endif ?>
-
-					<?php
-					$wereldbouw_description = get_bloginfo( 'description', 'display' );
-					if ( $wereldbouw_description || is_customize_preview() ) :
-						?>
-						<p class="site-description"><?php echo $wereldbouw_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-					<?php endif ?>
-				</div> <!-- .site-subtitle -->
 				<nav id="site-navigation" class="main-navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wereldbouw' ); ?></button>
 					<?php
@@ -66,6 +59,17 @@
 			
 		</div><!-- .site-header-content -->
 		<?php if (is_front_page()): ?>
-		<a class="site-header-scrolldown" href="#primary"><img src="<?= get_theme_file_uri('assets/images/scroll.svg'); ?>" /></a>
+			<aside class="site-header-widget-area">
+				<div class="header-widget-area-inner">
+					<?php dynamic_sidebar( 'sidebar-2' ); ?>
+				</div>
+			</aside>
+			<div class="site-header-description-area">
+				<?php
+				$wereldbouw_description = get_bloginfo( 'description', 'display' );
+				if ( $wereldbouw_description || is_customize_preview() ) :	?>
+					<p class="site-description"><?php echo $wereldbouw_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<?php endif ?>
+			</div>
 		<?php endif ?>
 	</header><!-- #masthead -->

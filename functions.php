@@ -127,12 +127,22 @@ add_action( 'after_setup_theme', 'wereldbouw_content_width', 0 );
 function wereldbouw_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'wereldbouw' ),
+			'name'          => esc_html__( 'Footer', 'wereldbouw' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'wereldbouw' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'before_widget' => '<section id="%1$s" class="footer-widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
+			'before_title'  => '<h2 class="footer-widget-title">',
+			'after_title'   => '</h2>',
+		));
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Header', 'wereldbouw' ),
+			'id'            => 'sidebar-2',
+			'description'   => esc_html__( 'Add widgets here.', 'wereldbouw' ),
+			'before_widget' => '<section id="%1$s" class="header-widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="header-widget-title">',
 			'after_title'   => '</h2>',
 		)
 	);
