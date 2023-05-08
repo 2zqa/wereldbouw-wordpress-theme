@@ -447,7 +447,7 @@ select,
 optgroup,
 textarea {
 	font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	line-height: 1.5;
 }
 
@@ -1125,8 +1125,8 @@ textarea {
 
 /* Header widgets
 --------------------------------------------- */
-.side-header-widget-area {
-
+.site-header-widget-area p {
+	text-shadow: 0 0 30px black;
 }
 
 
