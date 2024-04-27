@@ -50,19 +50,6 @@ if ( ! function_exists( 'wereldbouw_header_style' ) ) :
 			.site-header {
 				background-color: <?php echo esc_attr( $header_background_color ); ?>;
 			}
-		<?php
-		// Has the text been hidden?
-		if ( ! display_header_text() ) :
-			?>
-			.site-title,
-			.site-description {
-				position: absolute;
-				clip: rect(1px, 1px, 1px, 1px);
-				}
-			<?php
-			// If the user has set a custom color for the text use that.
-		else :
-			?>
 			.site-description, .site-header-widget-area {
 				color: <?php echo esc_attr( $description_text_color ); ?>;
 			}
@@ -70,7 +57,6 @@ if ( ! function_exists( 'wereldbouw_header_style' ) ) :
 			.main-navigation a {
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}
-		<?php endif; ?>
 		</style>
 		<?php
 	}
