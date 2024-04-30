@@ -690,6 +690,18 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 
+body {
+	background-image: url(assets/images/stone_background.png);
+}
+
+#page {
+	max-width: 80rem;
+	width: calc(100vw - 4rem);
+	margin: 0 auto;
+	background: white;
+	box-shadow: black 0 0 10rem;
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -1008,7 +1020,7 @@ textarea {
 }
 
 .single .entry-hero, .page-hero {
-	background: #2d3436 url(assets/images/stone_background.png);
+	background: #2d3436 url(assets/images/dirt_background.png);
 }
 
 .single .entry-hero .entry-header-wrapper, .page-hero-text {
