@@ -1144,9 +1144,6 @@ body {
 
 /* Footer widgets
 --------------------------------------------- */
-.footer-widget {
-	margin: 0 0 1.5em;
-}
 
 .footer-widget select {
 	max-width: 100%;
@@ -1159,7 +1156,8 @@ body {
 }
 
 .footer-widget-area-inner {
-	max-width: 60rem;
+	max-width: 84rem;
+	width: 100%;
 	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
@@ -1167,10 +1165,10 @@ body {
 }
 
 .footer-widget-area .footer-widget {
-	background: white;
-	flex-basis: 18rem;
-	margin: 1rem;
-	padding: 1rem;
+	background: #ffffff url(assets/images/calcite_background.png);
+	flex-basis: 24rem;
+	margin: 2rem;
+	padding: 1.5rem;
 }
 
 .footer-widget-area ul {

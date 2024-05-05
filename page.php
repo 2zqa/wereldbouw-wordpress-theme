@@ -32,6 +32,7 @@ get_header();
 		?>
 
 	</main><!-- #main -->
+</div><!-- #page -->
 
 <?php
 get_sidebar();

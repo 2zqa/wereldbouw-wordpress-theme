@@ -30,6 +30,7 @@ get_header();
 		</section><!-- .error-404 -->
 
 	</main><!-- #main -->
+</div><!-- #page -->
 
 <?php
 get_sidebar();
