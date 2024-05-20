@@ -1301,6 +1301,15 @@ body {
 	padding: 1rem;
 }
 
+/* News items widget
+--------------------------------------------- */
+
+.entry-content .is-grid {
+	display: flex !important;
+	padding: 0 !important;
+	flex-wrap: wrap;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
