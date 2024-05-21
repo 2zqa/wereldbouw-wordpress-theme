@@ -980,6 +980,10 @@ body {
 	display: none;
 }
 
+.entry-header h1, .page-header h1 {
+	text-align: center;
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
