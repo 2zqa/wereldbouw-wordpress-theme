@@ -11,14 +11,16 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="<?= (in_array(get_post_type(), ["forum", "page"]) && !is_front_page())? "entry-hero": "" ?>">
-		<?php wereldbouw_post_thumbnail(); ?>
-		<div class="entry-header-wrapper">
-			<header class="entry-header">
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			</header><!-- .entry-header -->
+	<?php if (!is_front_page()) : ?>
+		<div class="<?= in_array(get_post_type(), ["forum", "page"])? "entry-hero": "" ?>">
+			<?php wereldbouw_post_thumbnail(); ?>
+			<div class="entry-header-wrapper">
+				<header class="entry-header">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				</header><!-- .entry-header -->
+			</div>
 		</div>
-	</div>
+	<?php endif; ?>
 
 	<div class="entry-content">
 		<?php

@@ -25,11 +25,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'wereldbouw' ); ?></a>
 
-	<?php if (is_front_page()): ?>
-	<header id="masthead" class="site-header site-header-image" style="background-image: linear-gradient(rgba(255, 255, 255, 0.5) 0%, transparent 25%), url(<?= htmlspecialchars(header_image()) ?>);">
-	<?php else: ?>
 	<header id="masthead" class="site-header">
-	<?php endif ?>
 		<div class="site-header-content">
 			<div class="site-branding">
 				<div class="site-branding-logo">
@@ -56,20 +52,19 @@
 				</nav><!-- #site-navigation -->
 			</div> <!-- .site-header-inner -->
 
-			
 		</div><!-- .site-header-content -->
+
 		<?php if (is_front_page()): ?>
-			<aside class="site-header-widget-area">
-				<div class="header-widget-area-inner">
-					<?php dynamic_sidebar( 'sidebar-2' ); ?>
-				</div>
-			</aside>
-			<div class="site-header-description-area">
-				<?php
-				$wereldbouw_description = get_bloginfo( 'description', 'display' );
-				if ( $wereldbouw_description || is_customize_preview() ) :	?>
-					<p class="site-description"><?php echo $wereldbouw_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-				<?php endif ?>
-			</div>
+			<div class="site-header-overlay-area">
+				<?php the_custom_header_markup(); ?>
+
+				<div class="site-header-overlay-content">
+					<aside class="site-header-widget-area">
+						<div class="header-widget-area-inner">
+							<?php dynamic_sidebar( 'sidebar-2' ); ?>
+						</div>
+					</aside>
+				</div> <!-- .site-header-overlay-content -->
+			</div> <!-- .site-header-overlay-area -->
 		<?php endif ?>
 	</header><!-- #masthead -->

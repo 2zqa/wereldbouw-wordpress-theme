@@ -28,6 +28,7 @@ function wereldbouw_custom_header_setup() {
 				'height'             => 1080,
 				'flex-height'        => true,
 				'wp-head-callback'   => 'wereldbouw_header_style',
+				'video'              => true,
 			)
 		)
 	);
