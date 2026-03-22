@@ -2,3 +2,97 @@
 Theme Name: Wereldbouw
 Template: blankslate
 */
+
+/* FONTS */
+@font-face {
+    font-family: "OpenSans";
+    src: url("fonts/OpenSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "OpenSans";
+    src: url("fonts/OpenSans-Italic.ttf");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "OpenSans";
+    src: url("fonts/OpenSans-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Cinzel";
+    src: url("fonts/Cinzel-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Cinzel";
+    src: url("fonts/Cinzel-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* BODY, CONTAINER, SIDEBAR: positioning and background */
+body {
+    background-image: url(images/header.jpg), url(images/background.jpg);
+    background-repeat: no-repeat, repeat-y;
+    background-size: 100%, 100%;
+}
+
+@media (min-width: 40rem) {
+    #container {
+        display: flex;
+        gap: 2rem;
+        max-width: 65rem;
+        margin: 0 auto;
+    }
+    #content {
+        flex: 1; /* Adapts width */
+        min-width: 0; /* Prevents elements from within from expanding the container */
+        overflow: hidden;
+    }
+    #sidebar {
+        width: 15rem;
+        margin-top: 4rem;
+        flex-shrink: 0; /* Prevents sidebar from getting less wide */
+        align-self: flex-start; /* Otherwise sidebar uses entire page height. */
+    }
+}
+@media (min-width: 90rem) {
+    /* At this side, we make the page a bit wider. */
+    #container {
+        max-width: 80rem;
+    }
+    #sidebar {
+        width: 20rem;
+    }
+}
+#content {
+    /* main element */
+    background-color: #ede0c8;
+    background-image: url(images/parchment.jpg);
+    background-repeat: repeat-y;
+    background-size: 100%;
+    box-shadow: 0 0 50px black;
+    padding: 2rem;
+}
+#sidebar {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+}
+
+/* STYLING */
+body {
+    font-family: OpenSans, sans-serif;
+}
+h1 {
+    font-family: Cinzel, serif;
+    font-size: 2rem;
+}
+h2 {
+    font-family: Cinzel, serif;
+    font-size: 1.7rem;
+}
