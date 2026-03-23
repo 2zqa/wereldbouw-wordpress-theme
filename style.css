@@ -35,14 +35,118 @@ Template: blankslate
     font-style: normal;
 }
 
-/* BODY, CONTAINER, SIDEBAR: positioning and background */
+/* GENERAL STYLING */
 body {
+    font-family: OpenSans, sans-serif;
+}
+h1 {
+    font-family: Cinzel, serif;
+    font-size: 2rem;
+}
+h2 {
+    font-family: Cinzel, serif;
+    font-size: 1.7rem;
+}
+a {
+    color: #31512a;
+}
+a:hover {
+    color: #57c43f;
+}
+
+/* BACKGROUND */
+#wrapper {
     background-image: url(images/header.jpg), url(images/background.jpg);
     background-repeat: no-repeat, repeat-y;
     background-size: 100%, 100%;
+    background-position:
+        top left,
+        top right;
 }
 
-@media (min-width: 40rem) {
+/* MAIN MENU BAR */
+#menu {
+    background-image: url(images/button.jpg);
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    display: flex; /* Places the div.menu-main-menu-container next to div#search */
+    gap: 2rem;
+    padding: 0 calc(50vw - 40rem); /* Centers the menu */
+}
+#menu .menu-main-menu-container {
+    flex: 1; /* Adapts width */
+}
+#menu-main-menu {
+    /* ul element */
+    display: flex;
+}
+#menu-main-menu > li {
+    background-image: url(images/button-left.png), url(images/button-right.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position:
+        top left,
+        top right;
+    background-size:
+        auto 100%,
+        auto 100%;
+    flex: 1;
+
+    position: relative; /* For dropdown menu */
+}
+#menu-main-menu a {
+    display: block;
+    padding: 1rem;
+    color: #451d0f;
+    font-family: Cinzel, serif;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: white 0 0 6px;
+}
+#menu-main-menu a:hover,
+#menu-main-menu li.current_page_item a,
+#menu-main-menu li.current_page_parent a {
+    /* Hovering and current page */
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+#menu-main-menu .sub-menu {
+    /* Any popup menu of the main menu */
+    display: none;
+    position: absolute;
+    background-color: #ede0c8;
+    background-image: url(images/parchment.jpg);
+    background-position: center center;
+    box-shadow: 0 8px 16px 0 black;
+}
+#menu-main-menu > li:hover .sub-menu {
+    display: block; /* Make menu appear on hover over parent */
+}
+#menu-main-menu .sub-menu a {
+    padding: 0.5rem;
+}
+#menu-main-menu .sub-menu a:hover,
+#menu-main-menu .sub-menu li.current_page_item a {
+    /* Hovering and current page */
+    background: white;
+    color: #57c43f;
+}
+
+/* BRANDING */
+#branding-home {
+    min-height: 38vw;
+}
+#branding {
+    min-height: 15rem;
+}
+#site-title h1 {
+    text-align: center;
+}
+#site-description {
+    text-align: center;
+}
+
+/* MAIN AND SIDEBAR */
+@media (min-width: 45rem) {
     #container {
         display: flex;
         gap: 2rem;
@@ -55,7 +159,7 @@ body {
         overflow: hidden;
     }
     #sidebar {
-        width: 15rem;
+        width: 18rem;
         margin-top: 4rem;
         flex-shrink: 0; /* Prevents sidebar from getting less wide */
         align-self: flex-start; /* Otherwise sidebar uses entire page height. */
@@ -80,19 +184,14 @@ body {
     padding: 2rem;
 }
 #sidebar {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(229, 195, 214, 0.7);
+    backdrop-filter: blur(5px);
     padding: 2rem;
 }
-
-/* STYLING */
-body {
-    font-family: OpenSans, sans-serif;
+#sidebar a {
+    text-decoration: none;
 }
-h1 {
-    font-family: Cinzel, serif;
-    font-size: 2rem;
-}
-h2 {
-    font-family: Cinzel, serif;
-    font-size: 1.7rem;
+#sidebar a:hover {
+    color: #48793d;
+    text-decoration: underline;
 }
