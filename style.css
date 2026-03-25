@@ -89,11 +89,17 @@ tt {
 /* MAIN MENU BAR */
 #menu {
     background-image: url(images/button.jpg);
-    background-size: auto 100%;
-    background-repeat: repeat-x;
+    background-size: auto 3rem;
+    background-repeat: repeat;
     display: flex; /* Places the div.menu-main-menu-container next to div#search */
-    gap: 2rem;
-    padding: 0 calc(50vw - 40rem); /* Centers the menu */
+    gap: 1rem;
+    padding: 0 1rem 0 0; /* Just a margin on the right (for the search field) on small displays */
+}
+
+@media (min-width: 42rem) {
+    #menu {
+        padding: 0 calc(50vw - 40rem); /* Centers the menu */
+    }
 }
 #menu .menu-main-menu-container {
     flex: 1; /* Adapts width */
@@ -101,6 +107,7 @@ tt {
 #menu-main-menu {
     /* ul element */
     display: flex;
+    flex-wrap: wrap;
 }
 #menu-main-menu > li {
     background-image: url(images/button-left.png), url(images/button-right.png);
@@ -112,13 +119,14 @@ tt {
         auto 100%,
         auto 100%;
     flex: 1;
-
+    height: 3rem;
     position: relative; /* For dropdown menu */
 }
 #menu-main-menu a {
     display: block;
-    padding: 1rem;
     color: #451d0f;
+    height: 3rem;
+    padding: 1rem 1rem 0 1rem;
     font-family: Cinzel, serif;
     font-weight: bold;
     text-decoration: none;
@@ -135,6 +143,7 @@ tt {
     /* Any popup menu of the main menu */
     display: none;
     position: absolute;
+    z-index: 1;
     background-color: #ede0c8;
     background-image: url(images/parchment.jpg);
     background-position: center center;
@@ -145,6 +154,7 @@ tt {
 }
 #menu-main-menu .sub-menu a {
     padding: 0.5rem;
+    height: auto;
 }
 #menu-main-menu .sub-menu a:hover,
 #menu-main-menu .sub-menu li.current_page_item a {
@@ -152,21 +162,43 @@ tt {
     background: white;
     color: #57c43f;
 }
+#search .search-field {
+    height: 2rem;
+    margin: 0.5rem 0 0 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-image: url(images/search-icon.png);
+    background-repeat: no-repeat;
+    background-size: auto 1.5rem;
+    background-position: 95% center;
+    border: 1px solid #97642a;
+    box-shadow:
+        0 0 2px black inset,
+        0 0 5px white;
+    padding: 0.5rem;
+}
+#search .search-field:focus {
+    background-color: white;
+    outline: 0;
+}
+#search .search-submit {
+    display: none;
+}
 
 /* BRANDING */
 #branding-home {
-    position: relative;
     min-height: 38vw;
+    padding-top: 23vw;
+}
+@media (min-width: 65rem) {
+    #branding-home {
+        padding-top: 27vw;
+    }
 }
 #branding {
-    position: relative;
     min-height: 12rem;
+    padding-top: 5.5rem;
 }
 #branding-contents {
-    position: absolute;
-    bottom: 2rem;
-    left: 0;
-    right: 0;
     text-align: center;
 }
 #site-title a {
@@ -247,7 +279,7 @@ tt {
 
 /* FOOTER */
 #footer {
-    padding: 2rem 0;
+    padding: 2rem;
     margin: 0 auto;
     color: #ede0c8;
 }
@@ -267,12 +299,9 @@ tt {
 #content p {
     margin: 0 0 0.7rem 0;
     line-height: 1.3;
-    text-align: justify;
 }
 #content h1,
-#content h2,
-#sidebar h1,
-#sidebar h2 {
+#content h2 {
     margin: 2rem 0 0.7rem 0;
 }
 #content ul:not(.is-grid) {
@@ -285,7 +314,7 @@ tt {
     line-height: 1.3;
     list-style: upper-roman;
 }
-#content img {
+#content img.wp-post-image {
     max-width: 100%;
     height: auto;
     display: block; /* Prevents small layout glitches */
@@ -317,4 +346,23 @@ tt {
 #content .nav-links .nav-next {
     flex: 1;
     text-align: right;
+}
+
+/* SIDEBAR FORMATTING */
+#sidebar {
+    line-height: 1.3;
+}
+#sidebar h2,
+#sidebar h3 {
+    /* Modern widgets use h2, legacy h3 */
+    font-family: Cinzel, serif;
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin: 0;
+}
+#sidebar .widget-container {
+    margin: 0 0 1rem 0;
+}
+#sidebar ul {
+    margin: 0;
 }
