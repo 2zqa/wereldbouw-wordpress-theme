@@ -73,7 +73,32 @@ tt {
         monospace;
     font-size: 1.1rem;
     color: #262740;
-    text-shadow: 0 0 1px #262740;
+    text-shadow: 0.5px 0 0 #262740; /* Simulates semibold text */
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    border: 1px solid #eeeeee;
+}
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+textarea {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid #97642a;
+    box-shadow:
+        0 0 2px black inset,
+        0 0 5px white;
+    padding: 0.5rem;
+}
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    background-color: white;
+    outline: 0;
 }
 
 /* BACKGROUND */
@@ -110,14 +135,15 @@ tt {
     flex-wrap: wrap;
 }
 #menu-main-menu > li {
-    background-image: url(images/button-left.png), url(images/button-right.png);
-    background-repeat: no-repeat, no-repeat;
+    background-image:
+        url(images/button-left.png), url(images/button-right.png),
+        url(images/button.jpg);
+    background-repeat: no-repeat, no-repeat, repeat-x;
     background-position:
         top left,
-        top right;
-    background-size:
-        auto 100%,
-        auto 100%;
+        top right,
+        top left;
+    background-size: auto 100%;
     flex: 1;
     height: 3rem;
     position: relative; /* For dropdown menu */
@@ -132,11 +158,18 @@ tt {
     text-decoration: none;
     text-shadow: white 0 0 6px;
 }
+#menu-main-menu > li:hover,
+#menu-main-menu > li.current_page_item,
+#menu-main-menu > li.current_page_parent {
+    /* Hovering and current page --> li tag */
+    background-image:
+        url(images/button-left-hover.png), url(images/button-right-hover.png),
+        url(images/button-hover.jpg);
+}
 #menu-main-menu a:hover,
 #menu-main-menu li.current_page_item a,
 #menu-main-menu li.current_page_parent a {
-    /* Hovering and current page */
-    background: rgba(255, 255, 255, 0.3);
+    /* Hovering and current page --> a tag */
     color: black;
 }
 #menu-main-menu .sub-menu {
@@ -148,6 +181,7 @@ tt {
     background-image: url(images/parchment.jpg);
     background-position: center center;
     box-shadow: 0 8px 16px 0 black;
+    min-width: 12rem;
 }
 #menu-main-menu > li:hover .sub-menu {
     display: block; /* Make menu appear on hover over parent */
@@ -165,20 +199,11 @@ tt {
 #search .search-field {
     height: 2rem;
     margin: 0.5rem 0 0 0;
-    background-color: rgba(255, 255, 255, 0.4);
     background-image: url(images/search-icon.png);
     background-repeat: no-repeat;
     background-size: auto 1.5rem;
     background-position: 95% center;
-    border: 1px solid #97642a;
-    box-shadow:
-        0 0 2px black inset,
-        0 0 5px white;
     padding: 0.5rem;
-}
-#search .search-field:focus {
-    background-color: white;
-    outline: 0;
 }
 #search .search-submit {
     display: none;
@@ -196,7 +221,7 @@ tt {
 }
 #branding {
     min-height: 12rem;
-    padding-top: 5.5rem;
+    padding-top: 4rem;
 }
 #branding-contents {
     text-align: center;
@@ -252,7 +277,7 @@ tt {
         max-width: 80rem;
     }
     #sidebar {
-        width: 20rem;
+        width: 19.25rem;
     }
 }
 #content {
@@ -346,6 +371,146 @@ tt {
 #content .nav-links .nav-next {
     flex: 1;
     text-align: right;
+}
+
+/* BUTTONS */
+#content input[type="submit"],
+#content button,
+#sidebar button,
+#content .wp-block-button a {
+    background-color: #eba445;
+    background-image:
+        url(images/button-left.png), url(images/button-right.png),
+        url(images/button.jpg);
+    background-size: auto 100%;
+    background-position:
+        top left,
+        top right,
+        top left;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    border: none;
+    padding: 0.5rem 0.7rem;
+    font-family: Cinzel, serif;
+    font-weight: bold;
+    font-size: 1rem;
+    text-shadow: white 0 0 6px;
+    box-shadow: 0 0 3px black;
+    border-radius: 0;
+    cursor: pointer;
+    color: #451d0f;
+}
+#content .wp-block-button a {
+    /* Make the "fake" Wordpress buttons a bit bigger */
+    padding: 1rem;
+    margin: 0.3rem;
+    font-size: 1.2rem;
+    color: #451d0f !important; /* Unfortunately needed to prevent Wordpress overrides */
+}
+#content input[type="submit"]:hover,
+#content button:hover,
+#sidebar button:hover,
+#content .wp-block-button a:hover {
+    background-color: #f2ba79;
+    background-image:
+        url(images/button-left-hover.png), url(images/button-right-hover.png),
+        url(images/button-hover.jpg);
+    box-shadow: 0 0 3px #777777;
+    color: black;
+}
+#content .wp-block-button a:hover {
+    color: black !important; /* Unfortunately needed to prevent Wordpress overrides */
+}
+
+/* COMMENTS FORMATTING */
+#content #comments ul {
+    /* Disable normal list styling */
+    list-style: none;
+    margin-left: 0rem;
+}
+#content #comments li {
+    padding-top: 0.7rem;
+}
+#content #comments ul.children {
+    margin-left: 2rem;
+}
+#content #comments .comment-meta {
+    display: flex;
+}
+#content #comments .comment-meta div {
+    flex: 1;
+}
+#content #comments .comment-meta div.comment-metadata {
+    text-align: right;
+}
+#content #comments .avatar {
+    vertical-align: bottom;
+    height: 1.5rem;
+    width: auto;
+}
+#content #comments label {
+    display: inline-block;
+    min-width: 5rem;
+}
+#content #respond {
+    margin-top: 2rem;
+}
+
+/* BBPRESS FORUMS FORMATTING */
+#content #bbpress-forums ul.forums,
+#content #bbpress-forums ul.forum,
+#content #bbpress-forums ul.topic,
+#content #bbpress-forums ul.bbp-forums,
+#content #bbpress-forums ul.bbp-topics,
+#content #bbpress-forums .bbp-template-notice ul,
+#content #bbpress-forums ul.forum-titles {
+    margin: 0;
+    list-style: none;
+}
+#content div.bbp-template-notice,
+#content li.bbp-header,
+#content li.bbp-footer {
+    border: 1px solid transparent;
+    background: rgba(229, 195, 214, 0.7);
+}
+#content #bbpress-forums li.even,
+#content #bbpress-forums ul.even {
+    /* li element used in forum topic list or forums list */
+    background: transparent;
+}
+#content #bbpress-forums li.odd,
+#content #bbpress-forums ul.odd {
+    /* li element used in forum topic list or forums list */
+    background: rgba(255, 255, 255, 0.3);
+}
+#content #bbpress-forums div.even,
+#content #bbpress-forums div.odd {
+    /* li element used in topic replies */
+    background: transparent;
+}
+#content #bbpress-forums ul.bbp-forums,
+#content #bbpress-forums ul.bbp-topics,
+#content #bbpress-forums ul.bbp-replies,
+#content #bbpress-forums ul.topic,
+#content #bbpress-forums ul.forum {
+    border: 1px solid transparent;
+}
+#content #bbpress-forums div.bbp-reply-header {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid transparent;
+}
+#content #bbpress-forums fieldset {
+    border: none;
+    margin: 0;
+    padding: 0 5px 5px 0; /* Right and bottom padding for shadow of submit button */
+}
+#content #bbpress-forums .wp-editor-container {
+    border: 1px solid #97642a;
+    box-shadow:
+        0 0 5px black inset,
+        0 0 5px white;
+}
+#sidebar .bbp-login-form label {
+    width: auto;
 }
 
 /* SIDEBAR FORMATTING */
