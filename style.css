@@ -116,9 +116,11 @@ textarea:focus {
     background-image: url(images/button.jpg);
     background-size: auto 3rem;
     background-repeat: repeat;
-    display: flex; /* Places the div.menu-main-menu-container next to div#search */
-    gap: 1rem;
-    padding: 0 1rem 0 0; /* Just a margin on the right (for the search field) on small displays */
+}
+@media (min-width: 30rem) {
+    #menu {
+        display: flex; /* Places the div.menu-main-menu-container next to div#search */
+    }
 }
 
 @media (min-width: 42rem) {
@@ -129,12 +131,12 @@ textarea:focus {
 #menu .menu-main-menu-container {
     flex: 1; /* Adapts width */
 }
-#menu-main-menu {
+#menu .menu {
     /* ul element */
     display: flex;
     flex-wrap: wrap;
 }
-#menu-main-menu > li {
+#menu .menu > li {
     background-image:
         url(images/button-left.png), url(images/button-right.png),
         url(images/button.jpg);
@@ -148,7 +150,7 @@ textarea:focus {
     height: 3rem;
     position: relative; /* For dropdown menu */
 }
-#menu-main-menu a {
+#menu .menu a {
     display: block;
     color: #451d0f;
     height: 3rem;
@@ -158,21 +160,21 @@ textarea:focus {
     text-decoration: none;
     text-shadow: white 0 0 6px;
 }
-#menu-main-menu > li:hover,
-#menu-main-menu > li.current_page_item,
-#menu-main-menu > li.current_page_parent {
+#menu .menu > li:hover,
+#menu .menu > li.current_page_item,
+#menu .menu > li.current_page_parent {
     /* Hovering and current page --> li tag */
     background-image:
         url(images/button-left-hover.png), url(images/button-right-hover.png),
         url(images/button-hover.jpg);
 }
-#menu-main-menu a:hover,
-#menu-main-menu li.current_page_item a,
-#menu-main-menu li.current_page_parent a {
+#menu .menu a:hover,
+#menu .menu li.current_page_item a,
+#menu .menu li.current_page_parent a {
     /* Hovering and current page --> a tag */
     color: black;
 }
-#menu-main-menu .sub-menu {
+#menu .menu .sub-menu {
     /* Any popup menu of the main menu */
     display: none;
     position: absolute;
@@ -183,27 +185,31 @@ textarea:focus {
     box-shadow: 0 8px 16px 0 black;
     min-width: 12rem;
 }
-#menu-main-menu > li:hover .sub-menu {
+#menu .menu > li:hover .sub-menu {
     display: block; /* Make menu appear on hover over parent */
 }
-#menu-main-menu .sub-menu a {
+#menu .menu .sub-menu a {
     padding: 0.5rem;
     height: auto;
 }
-#menu-main-menu .sub-menu a:hover,
-#menu-main-menu .sub-menu li.current_page_item a {
+#menu .menu .sub-menu a:hover,
+#menu .menu .sub-menu li.current_page_item a {
     /* Hovering and current page */
     background: white;
     color: #57c43f;
 }
 #search .search-field {
     height: 2rem;
-    margin: 0.5rem 0 0 0;
+    margin: 0.5rem 1rem;
     background-image: url(images/search-icon.png);
     background-repeat: no-repeat;
     background-size: auto 1.5rem;
     background-position: 95% center;
     padding: 0.5rem;
+}
+@media (min-width: 46rem) {
+    /* Remove margin on the right if page is wider than menu bar, for alignment with content. */
+    margin: 0.5rem 0 0.5rem 1rem;
 }
 #search .search-submit {
     display: none;
@@ -228,7 +234,7 @@ textarea:focus {
 }
 #site-title a {
     color: #f4cf91;
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: Cinzel, serif;
     text-shadow:
         0 0 2px white,
@@ -237,8 +243,17 @@ textarea:focus {
         0 0 10px black;
     text-decoration: none;
 }
-#branding-home #site-title a {
-    font-size: 4rem; /* Larger font on homepage */
+@media (min-width: 35rem) {
+    /* Larger font size if more space is available. */
+    #site-title a {
+        font-size: 3rem;
+    }
+}
+@media (min-width: 42rem) {
+    /* Even larger font on homepage */
+    #branding-home #site-title a {
+        font-size: 4rem;
+    }
 }
 #site-description {
     color: white;
@@ -247,8 +262,13 @@ textarea:focus {
         0 0 5px black,
         0 0 5px black,
         0 0 5px black;
-    font-size: 1.3rem;
     font-family: Georgia, serif;
+    padding-bottom: 0.5rem;
+}
+@media (min-width: 35rem) {
+    #site-description {
+        font-size: 1.3rem;
+    }
 }
 
 /* MAIN AND SIDEBAR */
