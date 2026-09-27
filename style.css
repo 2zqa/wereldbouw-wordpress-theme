@@ -218,11 +218,11 @@ textarea:focus {
 /* BRANDING */
 #branding-home {
     min-height: 38vw;
-    padding-top: 23vw;
+    padding-top: 13vw;
 }
 @media (min-width: 65rem) {
     #branding-home {
-        padding-top: 27vw;
+        padding-top: 17vw;
     }
 }
 #branding {
@@ -231,6 +231,17 @@ textarea:focus {
 }
 #branding-contents {
     text-align: center;
+}
+#branding-contents img.custom-logo {
+    width: auto;
+    height: 5rem;
+    filter: drop-shadow(0 0 4px #F4CF91);
+    margin-bottom: 1.2rem;
+}
+@media (min-width: 42rem) {
+    #branding-contents img.custom-logo {
+        height: 9rem;
+    }
 }
 #site-title a {
     color: #f4cf91;
@@ -550,4 +561,7 @@ textarea:focus {
 }
 #sidebar ul {
     margin: 0;
+}
+#sidebar li {
+    margin-block-start: 0.1rem; /* Correction for Wordpress default margin */
 }

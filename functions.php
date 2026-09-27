@@ -9,4 +9,3 @@ function blankslate_enqueue_styles() {
         wp_get_theme()->get( 'Version' )
     );
 }
-?>

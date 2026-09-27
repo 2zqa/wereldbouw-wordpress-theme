@@ -16,6 +16,7 @@
 
    <div id="<?= is_front_page()? "branding-home" : "branding" ?>">
     <div id="branding-contents">
+     <?php if ( is_front_page() ) { the_custom_logo(); } ?>
      <div id="site-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
       <?php
        if ( is_front_page()) { echo '<h1>'; }
